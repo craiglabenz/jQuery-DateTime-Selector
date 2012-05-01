@@ -23,8 +23,9 @@ This is, obviously, most useful when collecting datetime values from users who a
 		minuteIncrement : 5,
 		secondIncrement : 5,
 		wrapperClass : 'marco polo',
+		defaultValue : '2014-12-25 06:00:00',	
 		updateTimeCallback : function(selectWrapper, name){ console.log(arguments); }
-		};
+	};
 	$('input').splitDateTime(exampleValues);
 	</script>
 
