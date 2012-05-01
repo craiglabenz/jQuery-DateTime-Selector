@@ -1,0 +1,19 @@
+<input name="datetime" type="text" value="2012-04-04 12:05:00" />
+<div style="clear:both;"></div>
+<br />
+<input name="datetime2" type="text" value="" />
+
+<script src="jquery.js"></script>
+<script src="split-datetime.jquery.js"></script>
+
+<script>
+	var exampleValues = {
+		useSeconds : true,
+		minuteIncrement : 1,
+		secondIncrement : 30,
+		wrapperClass : 'marco polo',
+		defaultValue : '2014-12-25 06:00:00',
+		updateTimeCallback : function(selectWrapper, name){ console.log(arguments); }
+	};
+	$('input').splitDateTime(exampleValues);
+</script>
