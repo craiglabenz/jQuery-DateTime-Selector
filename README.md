@@ -12,22 +12,23 @@ This is, obviously, most useful when collecting datetime values from users who a
 ## QuickStart
 `example.html` has a complete working example with two non-colliding inputs. However, an example call would be like so:  
 
-	<input name="datetime" type="text" value="2014-04-04 12:05:00" />
-	
-	<script src="jquery.js"></script>
-	<script src="split-datetime.jquery.js"></script>
-	
-	<script>
-	var exampleValues = {
-		useSeconds : true,
-		minuteIncrement : 5,
-		secondIncrement : 5,
-		wrapperClass : 'marco polo',
-		defaultValue : '2014-12-25 06:00:00',	
-		updateTimeCallback : function(selectWrapper, name){ console.log(arguments); }
-	};
-	$('input').splitDateTime(exampleValues);
-	</script>
+```html
+<input name="datetime" type="text" value="2014-04-04 12:05:00" />
+<script src="jquery.js"></script>
+<script src="split-datetime.jquery.js"></script>
+```
+
+```js
+var exampleValues = {
+	useSeconds : true,
+	minuteIncrement : 5,
+	secondIncrement : 5,
+	wrapperClass : 'marco polo',
+	defaultValue : '2014-12-25 06:00:00',	
+	updateTimeCallback : function(selectWrapper, name){ console.log(arguments); }
+};
+$('input').splitDateTime(exampleValues);
+```
 
 ## Parameters
 `useSeconds` : Determines if a seconds dropdown is created, or a value of 00 is always used. Defaults to false.  
